@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>sunshine</title>
+
+        <script>
+            /* Defining Table
+                Input: an integer named n
+                Processing: while loop
+                Output: the word 'sunshine' repeated n times
+            */
+
+            function sunshine() {
+                // get an integer from user
+                var n = parseInt(document.getElementById('number').value);
+
+                // build a message that contains 'sunshine' multiple times
+                var message = ""; //empty string
+                var i = 0;
+                while (i < n) {
+                    message += "sunshine<br>";
+                    i++;
+                }
+
+                // display message for the user
+                document.getElementById('output').innerHTML = message;
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        Please enter an integer: <input type="text" id="number"><br>
+        <button type="button" onclick="sunshine()">Surprise Me!</button>
+        <div id="output"></div> 
+    </body>
+</html>

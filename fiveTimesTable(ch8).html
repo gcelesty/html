@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>table</title>
+
+        <script>
+            /* Defining Table
+                Input: have user press button
+                Processing: loop to display the five times table
+                Output: the correct amount of times table
+            */
+
+            //string catatination
+            //one line at a time
+            //5x1=5<br>
+
+            function table() {
+                //loop to display correct amount of times table
+                var table = "";
+                for (var i = 1; i < 13; i++) {
+                    //display the correct times table
+                    answer = 5 * i;
+                    table += "5 x " + i + " = " + answer + "<br>";
+                }
+
+                //display the times table
+                document.getElementById('output').innerHTML = table;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="table()">Display Table</button>
+        <div id="output"></div> 
+    </body>
+</html>

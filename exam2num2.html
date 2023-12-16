@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input: get 3 numbers from user
+ * Processing: loop that figures out the result
+ * Output: display integers between the numbers that are divisible by the divisor
+ */
+
+ function num() {
+     // get 3 numbers
+     var start = parseInt(document.getElementById('start').value);
+     var end = parseInt(document.getElementById('end').value);
+     var divisor = parseInt(document.getElementById('divisor').value);
+
+     //loop
+     var output = "";
+     for (var i = start; i <= end; i++) {
+         if ((i % divisor) == 0) {
+             output += i + " ";
+         }
+     }
+
+     //display the integers
+     document.getElementById('output').innerHTML = output;
+ }
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="num()">Click</button>
+<div id="output"></div>
+</body>
+</html>

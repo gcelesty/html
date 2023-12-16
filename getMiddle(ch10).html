@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>math</title>
+
+        <script>
+            /* Defining Table
+                Input: obtain array of the list
+                Processing: get the middle number
+                Output: display the middle number
+            */
+
+            function display() {
+                //list
+                var list = [17, 8, 9, 5, 20];
+                //var list = [12, 4, 8, 15, 17, 5, 20, 11];
+
+                var value = getMiddle(list);
+
+                //display
+                document.getElementById('output').innerHTML = value;
+            }
+
+            function getMiddle(list) {
+                //math
+                   /* if (list.length % 2 == 0) {
+                        s = list.length / 2;
+                    }*/
+                    var s = Math.floor(list.length / 2);
+                    var value = list[s];
+                return value;
+            }
+                
+            
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

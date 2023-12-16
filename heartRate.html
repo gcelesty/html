@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Heart Rate</title>
+
+        <script>
+            /* Defining Table
+                Input: users age
+                Processing: max = 220 - age
+                            65% of max ( .65 * max)
+                            85% of max ( .85 * max)
+                Output: slowest and fastest benefical rates
+            */
+
+            function heart() {
+                
+                // get users age
+                var a = parseInt(document.getElementById('age').value);
+
+                //calulate slowest and faster rate
+                var max = 220 - a;
+                var s = Math.round(0.65 * max);
+                var f = Math.round(0.85 * max);
+
+                //display the slowest and fastest
+                document.getElementById('output').innerHTML = "Slowest Heart: " + s + "<br>Fastest Heart: " + f;
+            }
+        </script>
+    </head>
+
+    <body>
+        Please enter your age: <input type="text" id="age"><br>
+        <button type="button" onclick="heart()">Heart Rates</button>
+        <div id="output"></div> 
+    </body>
+</html>

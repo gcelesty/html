@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>presidents</title>
+
+        <script>
+            /* Defining Table
+                Input: use the names given
+                Processing: fllip the order of the names
+                Output: display the names in the right order (last, first)
+            */
+
+            function makeFullName(givenName, familyName) {
+                //display the order
+                var name = familyName + ", " + givenName;
+                return name;
+            }
+
+            function display() {
+                //display the names in the order
+
+                //var fn = makeFullName("Theodore", "Roosevelt");
+                //var fn = makeFullName("Barak", "Obama");
+                var fn = makeFullName("Donald", "Trump");
+
+                document.getElementById('output').innerHTML = fn;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+
+        <script>
+            /* Defining Table
+                Input: width, aspect ratio, diameter
+                Processing: compute the volume with equation
+                Output: volume
+            */
+        function tire() {
+            //get width, aspect ,diameter from user
+            var w = parseFloat(document.getElementById('width').value);
+            var a = parseFloat(document.getElementById('ratio').value);
+            var d = parseFloat(document.getElementById('diameter').value);
+            
+            //compute volume
+            var v = Math.PI * w * w * a * (w * a + 2540 * d) / 10000000;
+
+            //display result
+            document.getElementById('output').innerHTML = v;
+        }
+        </script>
+    </head>
+
+    <body>
+        Tire Width (milimeters): <input type="text" id="width" size="5"><br>
+        Aspect Ratio: <input type="text" id="ratio" size="5"><br>
+        Wheel Diameter (inches): <input type="text" id="diameter" size="5"><br>
+        <button type="button" onclick="tire()">Volume</button>
+        <div id="output"></div> 
+    </body>
+</html>

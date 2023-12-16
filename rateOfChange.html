@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <title>Rate of Change</title>
+        <script>
+            /* Defining Table
+                Input: get the current price and previous price from the user
+                Processing: 1. subtract the previous price from the current price
+                            2. divide the difference by the previous price
+                Output: display the rate of change of the price
+            */
+
+            function computeRateOfChange() {
+                
+                //get current and previous price from the user
+                var p = parseFloat(document.getElementById('prevPrice').value);
+                var c = parseFloat(document.getElementById('currPrice').value);
+
+                //calculate the rate of change
+                var r = (c - p) / p;
+
+                //display the right amount of digits
+                var digits = 4;
+                var multiplier = Math.pow(10, digits);
+                r = Math.round(r * multiplier) / multiplier;
+
+                //display the rate of change
+                document.getElementById('rate').innerHTML = r;
+            }
+
+        </script>
+    </head>
+
+<body>
+    <h1>Rate of Change</h1>
+    Previous Price <input type="text" id="prevPrice"><br>
+    Current Price <input type="text" id="currPrice"><br>
+    <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
+    Rate of Change <div id="rate"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Gas Milage</title>
+
+        <script>
+            /* Defining Table
+                Input: get input from the user
+                Processing: subtract end from the beginning
+                            divide difference by gas
+                            display the correct amount digits
+                Output: milage car get per gallon of gas
+            */
+
+function odometer() {
+
+            // get beginning and end of odometer and amount of gas
+            var b = parseFloat(document.getElementById('beginning').value);
+            var e = parseFloat(document.getElementById('end').value);
+            var g = parseFloat(document.getElementById('gas').value);
+
+            //subtract the end from the beginning
+            var m = (e - b) / g;
+        
+            // display the correct amount of digits
+            var digits = 2;
+            var multiplier = Math.pow(10, digits);
+            m = Math.round(m * multiplier) / multiplier;
+
+            // display the milage of the car
+            document.getElementById('milage').innerHTML = m;
+        }
+        </script>
+    </head>
+
+    <body>
+        Enter beginning of the odometer: <input type="text" id="beginning"><br>
+        Enter ending of the odometer: <input type="text" id="end"><br>
+        Enter the number of gallons of gas: <input type="text" id="gas"><br>
+        <button type="button" onclick="odometer()">Milage</button>
+        <div id="milage"></div> 
+    </body>
+</html>

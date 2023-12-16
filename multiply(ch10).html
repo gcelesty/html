@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+
+        <script>
+            /* Defining Table
+                Input: obtain the array list
+                Processing: multiply by the multiplier
+                Output: the new list
+            */
+
+            function display() {
+                //list
+                var list = [17, 8, 9, 5, 20];
+                var products = multiply(list, 3);
+
+                //var list = [-4, 3, 2.1, 6];
+                //var products = multiply(list, 2);
+
+                //display
+                document.getElementById('output').innerHTML = products;
+                
+            }
+
+            function multiply(list, multiplier) {
+                //math
+                for (var i = 0; i < list.length; i++) {
+                    list[i] *= multiplier;
+                    var products = list[i];
+                }
+                return products;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

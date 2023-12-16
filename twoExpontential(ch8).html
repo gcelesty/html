@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>expo</title>
+
+        <script>
+            /* Defining Table
+                Input: have user press button
+                Processing: loop through the exponential 1-31
+                Output: display the exponential answers in order
+            */
+
+            //Math.pow
+
+            function expo() {
+                //loop through 31 exponentials of 2
+                var display = "";
+                for (var i = 0; i < 32; i++) {
+                    //go through the exponentials of 2
+                    display += Math.pow(2, i) + "<br>";
+                }
+
+                //display the numbers
+                document.getElementById('output').innerHTML = display;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="expo()">Display</button>
+        <div id="output"></div> 
+    </body>
+</html>

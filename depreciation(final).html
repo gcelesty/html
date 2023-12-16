@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>depression</title>
+
+        <script>
+            /* Defining Table
+                Input: get the numbers
+                Processing: put all the numbers into the formula
+                Output: display the depreciation
+            */
+
+            function depreciation(s, e, m) {
+                //do math
+                var d = (s - e) / m;
+                return d;
+            }
+
+            function display() {
+                //lists
+            
+                /*
+                var startValue = 1000.95;
+                var endValue = 950.47;
+                var months = 8;
+                */
+
+                
+                var startValue = 28000;
+                var endValue = 26200;
+                var months = 12;
+                
+
+
+                var d = depreciation(startValue, endValue, months);
+                var digits = 4;
+                var multiplier = Math.pow(10, digits);
+                d = Math.round(d * multiplier) / multiplier;
+
+                document.getElementById('output').innerHTML = d;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

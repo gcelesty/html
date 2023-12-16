@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+
+        <script>
+            /* Defining Table
+                Input: get values
+                Processing: compute volume
+                Output: display volume
+            */
+
+            function volume() {
+                //get values
+                var r = parseFloat(document.getElementById('radius').value);
+
+                //formula
+                var v = (4 / 3) * Math.PI * Math.pow(r, 3);
+
+                //display
+                document.getElementById('output').innerHTML = Math.round(v);
+            }
+        </script>
+    </head>
+
+    <body>
+        Enter radius: <input type="text" id="radius"><br>
+        <button type="button" onclick="volume()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

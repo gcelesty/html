@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>tree</title>
+        <script type="text/javascript" src="draw.js"></script>
+
+        <script>
+            "use strict";
+
+        function drawPicture() {
+            //colors
+            var centerX = 400;
+            var centerY = 200;
+            var sky = makeColor3(9, 18, 102);
+            var tree = makeColor3(7, 122, 25);
+            var branch = makeColor3(112, 81, 61);
+            var moon = makeColor3(230, 227, 197);
+            var bmoon = makeColor3(9, 18, 102);
+            var star = makeColor3(222, 216, 33);
+
+            var canvas = document.getElementById('picture');
+
+            //background
+            fillRect(canvas, centerX - 400, centerY - 200, 600, 400, sky);
+
+
+
+
+            //draw branch 1
+            fillRect(canvas, centerX, centerY, 20, 400, branch);
+
+            //draw tree 1
+            fillTri(canvas, 410, 150, 370, 250, 450, 250, tree);
+
+            fillTri(canvas, 410, 200, 360, 300, 460, 300, tree);
+
+            fillTri(canvas, 410, 250, 350, 350, 470, 350, tree);
+
+
+
+
+            //draw branch 2
+            fillRect(canvas, centerX - 150, centerY, 20, 400, branch);
+
+            //draw tree 2
+            fillTri(canvas, 260, 150, 220, 250, 300, 250, tree);
+
+            fillTri(canvas, 260, 200, 210, 300, 310, 300, tree);
+
+            fillTri(canvas, 260, 250, 200, 350, 320, 350, tree);
+
+
+
+            
+            //draw branch 3
+            fillRect(canvas, centerX - 300, centerY, 20, 400, branch);
+
+            //draw tree 3
+            fillTri(canvas, 110, 150, 70, 250, 150, 250, tree);
+
+            fillTri(canvas, 110, 200, 60, 300, 160, 300, tree);
+
+            fillTri(canvas, 110, 250, 50, 350, 170, 350, tree);
+
+
+
+
+
+            //draw moon
+            fillCircle(canvas, centerX + 100, centerY - 100, 50, moon);
+
+            //draw the invisible moon
+            fillCircle(canvas, centerX + 130, centerY - 100, 50, bmoon);
+
+            
+           
+            //draw stars
+            fillCircle(canvas, centerX + 140, centerY - 200, 5, star);
+
+            fillCircle(canvas, centerX + 100, centerY - 100, 3, star);
+            
+            fillCircle(canvas, centerX + 190, centerY - 110, 5, star);
+
+            fillCircle(canvas, centerX + 140, centerY - 50, 3, star);
+
+            fillCircle(canvas, centerX, centerY - 100, 5, star);
+
+            fillCircle(canvas, centerX - 300, centerY - 100, 3, star);
+
+            fillCircle(canvas, centerX - 50, centerY - 150, 3, star);
+
+            fillCircle(canvas, centerX - 100, centerY - 130, 5, star);
+
+            fillCircle(canvas, centerX - 200, centerY - 100, 3, star);
+
+            fillCircle(canvas, centerX - 260, centerY - 180, 5, star);
+
+            fillCircle(canvas, centerX - 350, centerY - 130, 5, star);
+
+            fillCircle(canvas, centerX - 340, centerY - 30, 5, star);
+
+            fillCircle(canvas, centerX - 250, centerY - 10, 3, star);
+
+            fillCircle(canvas, centerX - 210, centerY - 20, 5, star);
+
+            fillCircle(canvas, centerX - 90, centerY - 40, 5, star);
+
+            fillCircle(canvas, centerX + 90, centerY + 45, 3, star);
+
+            fillCircle(canvas, centerX + 180, centerY + 100, 5, star);
+        }
+
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="drawPicture()">draw</button>
+        <canvas id="picture" width="600" height="400" style="border:1px solid"></canvas>
+    </body>
+</html>

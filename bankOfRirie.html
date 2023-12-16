@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <h1>Down Payment</h1>
+        <title>Bank of Ririe</title>
+
+        <script>
+            /* Defining Table
+                Input: cost of house
+                Processing: if statements with calculations inside of them
+                Output: down payment
+            */
+
+            function math() {
+
+                // get cost of the house
+                var cost = parseFloat(document.getElementById('cost').value);
+
+                //calculation
+                var down;
+
+                //50,000
+                if (cost < 50000) {
+                    down = cost * .05;
+                }
+
+                //100,000 and 50,000
+                else if (cost < 100000) {
+                    down = 2000 + .10 * (cost - 50000);
+                }
+
+                //200,000 and 100,000
+                else if (cost < 200000) {
+                    down = 7500 + .20 * (cost - 100000);
+                }
+
+                //27,500 and 200,000
+                else {
+                    down = 27500 + .25 * (cost - 200000);
+                }
+
+
+                //display the down payment
+                document.getElementById('output').innerHTML = down;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        Cost of the House: <input type="text" id="cost"><br>
+        <button type="button" onclick="math()">Calculate Down Payment</button>
+        <div id="output"></div> 
+    </body>
+</html>

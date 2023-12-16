@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>sleepy</title>
+
+        <script>
+            /* Defining Table
+                Input: get the date from computer
+                Processing: determine when user can sleep in verse wake up
+                Output: display if user can sleep in or get up
+            */
+
+            function sleepy() {
+
+                //get the date from the computer
+                var now = new Date();
+                var month = now.getMonth() + 1;
+                var dayOfMonth = now.getDate();
+                var dayOfWeek = now.getDay(); 
+
+                //determine when you can sleep in or get up
+                var alert;
+                if (month == 1 && dayOfMonth == 1) {
+                    alert = 'Sleep in.';
+                }
+                else if (month == 7 && dayOfMonth == 4) {
+                    alert = 'Sleep in.';
+                }
+                else if (month == 12 && dayOfMonth == 25) {
+                    alert = 'Sleep in.';
+                }
+                else if (dayOfWeek == 0 || dayOfWeek == 6) {
+                    alert = 'Sleep in.';
+                }
+                else {
+                    alert = 'Get up!';
+                }
+                // If it jan 1
+
+                // else if it is jul 4
+
+                // else if it is Christmas
+
+                // else if it is a weekend
+
+                // else get up
+
+
+                //display sleep in or get up
+                document.getElementById('output').innerHTML = alert;
+
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="sleepy()">What should I do?</button>
+        <div id="output"></div> 
+    </body>
+</html>

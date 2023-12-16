@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>multiplication</title>
+
+        <script>
+            /* Defining Table
+                Input: an integer that determines the size of the multiplication table
+                Processing: 2 nested loops with multiplication inside inner loop
+                    a loop to count rows
+                        a loop to count columns
+                            multipplication
+                            string concatination
+                Output: the multiplication table
+            */
+
+            function table() {
+                //get integer from user
+                var limit = parseInt(document.getElementById('limit').value);
+
+                //build multiplication table
+                var table = "";
+                for (var row = 1; row <= limit; row++) {
+                    for (var col = 1; col <= limit; col++) {
+                        var product = row * col;
+                        table += product + "\t";
+                    }
+                    table += "<br>";
+                }
+
+                //display the table to the user
+                document.getElementById('output').innerHTML = table;
+            }
+        </script>
+    </head>
+
+    <body>
+        Enter an integer: <input type="text" id="limit"><br>
+        <button type="button" onclick="table()">Click</button>
+        <pre id="output"></pre> 
+    </body>
+</html>

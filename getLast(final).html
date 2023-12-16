@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>last</title>
+
+        <script>
+            /* Defining Table
+                Input: obtain list
+                Processing: determine the last number of the array
+                Output: display the output
+            */
+
+            function getLast(list) {
+                //get last
+                var l = list[list.length - 1];
+                return l;
+            }
+
+            function display() {
+                //list
+                //var list = [-3, 0, 7.1, 5];
+                var list = [17, 8, 9, 5, 20];
+                //var list = [5, -2.1, 6.3, 9, 5, 13];
+
+                var last = getLast(list);
+
+                //display 
+                document.getElementById('output').innerHTML = last;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

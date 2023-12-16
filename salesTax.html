@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>tax</title>
+
+        <script>
+            /* Defining Table
+                Input: get day of the week from the computer and the user input
+                Processing: add sales tax to subtotal
+                Output: display total amount
+            */
+
+            function salesTax() {
+
+                //get the day of week from the computer and the user input
+                var dayOfWeek = new Date().getDay();
+                //var dayOfWeek = 4;
+                var sub = parseFloat(document.getElementById('sub').value);
+
+                //add sales tax
+                var total;
+                if (sub > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
+                    sub -= sub * .1;
+                    //dis = sub * .1;
+                    tax = sub * .06;
+                    total = sub + tax;
+                }
+                else {
+                    tax = sub * .06;
+                    total = sub + tax;
+                }
+
+                //display correct amount of digits
+                //total = total.toFixed(2);
+
+                var digits = 2;
+                var multiplier = Math.pow(10, digits);
+                total = Math.round(total * multiplier) / multiplier;
+
+                //display the total amount
+                document.getElementById('output').innerHTML = total;
+            }
+        </script>
+    </head>
+
+    <body>
+        Subtotal: <input type="text" id="sub"><br>
+        <button type="button" onclick="salesTax()">Final Price</button>
+        <div id="output"></div> 
+    </body>
+</html>

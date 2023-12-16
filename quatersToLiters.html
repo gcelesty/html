@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Liters</title>
+
+        <script>
+            /* Defining Table
+                Input: get quaters from user
+                Processing: convert quarters to liters
+                            display 3 digits
+                Output: output the liters from the quarts
+            */
+        function conversion() {
+
+            // get quarts and convert string to number
+            var q = parseFloat(document.getElementById('quarts').value);
+
+            // do conversion from quarts to liters
+            var l = q / 1.057;
+
+            // display the correct amount of digits
+            var digits = 2;
+            var multiplier = Math.pow(10, digits);
+            l = Math.round(l * multiplier) / multiplier;
+
+            // display liters
+            document.getElementById('liters').innerHTML = l;
+
+            }   
+        </script>
+    </head>
+
+    <body>
+        Enter quarts: <input type="text" id="quarts"><br>
+        <button type="button" onclick="conversion()">Convert</button>
+        <div id="liters"></div> 
+    </body>
+</html>

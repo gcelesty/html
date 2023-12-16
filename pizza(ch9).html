@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>pizza</title>
+        <script type="text/javascript" src="draw.js"></script>
+
+        <script>
+            "use strict";
+
+        function drawPizza() {
+            //colors
+            var centerX = 300;
+            var centerY = 200;
+            var crust = makeColor3(226, 202, 163);
+            var sauce = makeColor3(198, 10, 25);
+            var cheese = makeColor3(249, 249, 229);
+            var pineapple = makeColor3(255, 252, 99);
+            var ham = makeColor3(255, 200, 200);
+
+            var canvas = document.getElementById('picture');
+
+            //draw the crust
+            fillCircle(canvas, centerX, centerY, 150, crust);
+
+            //draw sauce
+            fillCircle(canvas, centerX+3, centerY, 125, sauce);
+
+            //draw cheese
+            fillCircle(canvas, centerX-3, centerY, 120, cheese);
+
+            //draw pineapple
+            fillRect(canvas, centerX + 5, centerY + 5, 30, 10, pineapple);
+
+        }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="drawPizza()">draw</button>
+        <canvas id="picture" width="600" height="400" style="border:1px solid"></canvas>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>math</title>
+
+        <script>
+            /* Defining Table
+                Input: obtain array of list
+                Processing: count the even numbers
+                Output: display the result
+            */
+
+            function display() {
+                //list
+                var list = [17, 8, 9, 5, 20];
+                //var list = [12, -4, 8, 15, 17, -5, 20, 11];
+
+                var count = countEvens(list);
+
+                //display
+                document.getElementById('output').innerHTML = count;
+            }
+
+            function countEvens(list) {
+                //math
+                var count = 0;
+                for (var i = 0; i < list.length; i++) {
+                    if (list[i] % 2 == 0) {
+                        count += 1;
+                    }
+                }
+                return count;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

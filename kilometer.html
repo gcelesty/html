@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+
+        <script>
+            /* Defining Table
+                Input:
+                Processing:
+                Output: 
+            */
+            function convertKilosToMiles() {
+                // get a distance in kilometer from the user
+                var somethingElse = document.getElementById('kilometers').value;
+
+                // convert the user supplied text to a number
+                var kilos = parseFloat(somethingElse);
+
+                // convert kilometers to miles
+                var miles = kilos * 0.621371;
+
+                // display the miles for the user to see
+                document.getElementById('output').innerHTML = miles;
+            }
+        </script>
+    </head>
+
+    <body>
+        Enter a distance in kilometers: 
+        <input type="text" id="kilometers"><br>
+        <button type="button" onclick="convertKilosToMiles()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

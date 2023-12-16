@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Wind</title>
+
+        <script>
+            /* Defining Table
+                Input: get input from user
+                Processing: create new func and caluclate wind chill factor
+                Output: call the func and display the wind chill
+            */
+
+            function doInputOutput() {
+                //get temp and wind speed
+                var tempF = parseFloat(document.getElementById('temp').value);
+                var speed = parseFloat(document.getElementById('speed').value);
+
+                //call and store chill func
+                var result = windChill(tempF, speed);
+
+                //display the result
+                document.getElementById('output').innerHTML = result;
+            }
+
+            function windChill(t, s) {
+                //calculate the chill factor
+                var f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t * Math.pow(s, 0.16);
+                return f;
+            }
+        </script>
+    </head>
+
+    <body>
+        Temperature: <input type="text" id="temp"><br>
+        Wind Speed: <input type="text" id="speed"><br>
+        <button type="button" onclick="doInputOutput()">Wind Chill</button>
+        <div id="output"></div> 
+    </body>
+</html>

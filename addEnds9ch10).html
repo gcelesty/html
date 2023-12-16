@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>math</title>
+
+        <script>
+            /* Defining Table
+                Input: obtain the array
+                Processing: add the first and last number
+                Output: display results
+            */
+
+            function display() {
+                //list
+                //var list = [-3, 0, 7.1, 5];
+                //var list = [17, 8, 9, 5, 20];
+                var list = [5, -2.1, 6.3, 9, 5, 13];
+
+                 var value = addEnds(list);
+
+                //display
+                document.getElementById('output').innerHTML = value;
+
+            }
+
+            function addEnds(list) {
+                //math
+
+                var f = list[0];
+                var l = list[list.length - 1];
+                var value = f + l;
+                return value;
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

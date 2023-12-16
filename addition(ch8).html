@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>total</title>
+
+        <script>
+            /* Defining Table
+                Input: get integer from user
+                Processing: loop to do addititon of odd integers
+                Output: sum of all odd integers
+            */
+
+            //example 13
+
+            function add() {
+                //get integer from user
+                var n = parseFloat(document.getElementById('integer').value);
+
+                //do addition of odd up to integer
+                var sum = 0;
+                for (var i = 1; i <= n; i += 2) {
+                    sum += i;
+                }
+
+                //display the sum
+                document.getElementById('output').innerHTML = sum;
+            }
+        </script>
+    </head>
+
+    <body>
+        Enter an integer: <input type="text" id="integer"><br>
+        <button type="button" onclick="add()">Sum</button>
+        <div id="output"></div> 
+    </body>
+</html>

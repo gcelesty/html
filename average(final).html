@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>average</title>
+
+        <script>
+            /* Defining Table
+                Input: take in parameters
+                Processing: do math and calculations
+                Output: display the result (average of numbers)
+            */
+
+            function averageBig(list) {
+                
+                var r = 0;
+                var n = 0;
+                //for loop to loop through all the numbers
+                for(i = 0; i < list.length; i++) {
+                    if(list[i] > 1000) {
+                        r = list[i] + r;
+                        n = n + 1;
+                    }    
+                    else {
+                        r = 0;
+                        n = n + 1;
+                    }                
+                }
+
+                var average = r / n;
+                return average;
+            }
+
+            function display() {
+                //lists
+                //var list = [70, 1010, 950, 2014, 6];
+                //var list = [-72.3, 3000, 873, 2312, 68, 7501.3];
+                var list = [70, 950, 671, 6];
+
+                var score = averageBig(list);
+                var digits = 4;
+                var multiplier = Math.pow(10, digits);
+                score = Math.round(score * multiplier) / multiplier;
+
+                //display
+                document.getElementById('output').innerHTML = score;
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onclick="display()">Click</button>
+        <div id="output"></div> 
+    </body>
+</html>

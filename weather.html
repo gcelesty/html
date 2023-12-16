@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Weather</title>
+
+        <script>
+            /* Defining table
+                Input: time of day (morning, afternoon,     night)
+                Processing: string concatenation to build the weather message
+                Output: message with the weather for the given part of the day
+                */
+                function weather() {
+                    // get time of day from the user
+                    var timeOfDay = document.getElementById('time').value;
+
+                    // build a message with a desciption of the weather
+                    var message = "During the " + timeOfDay + ", the weather will be windy.";
+
+                    // display the message for the user to see
+                    document.getElementById('output').innerHTML = message;
+                }
+        </script>
+    </head>
+
+    <body>
+        Enter morning, afternoon, evening or night: <input type="text" id="time"><br>
+        <button type="button" onclick="weather()">Click</button>
+        <div id="output"></div> 
+    </body>
+<html>

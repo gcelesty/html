@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>oH yeaHH</title>
+
+        <h1>Need help deciding?</h1>
+
+        <script>
+            /* Defining Table
+                Input: get the weather
+                Processing: if, else if, and else statements to output the correct shoes
+                Output: shoes they should wear
+            */
+            
+            function foot() {
+
+                // get weather
+                var w = document.getElementById('weather').value;
+
+                // if else statments for shoes
+                var shoe;
+                if (w == "hot") {
+                    shoe = "sandals";
+                } 
+                else if (w == "rain") {
+                    shoe = "galoshes";
+                }
+                else if (w == "snow") {
+                    shoe = "boots";
+                }
+                else {
+                    shoe = "shoes";
+                }
+
+                // display shoe
+                document.getElementById('output').innerHTML = "You should wear " + shoe; 
+                
+            }
+
+        </script>
+    </head>
+
+    <body>
+        Enter weather: <input type="text" id="weather"><br>
+        <button type="button" onclick="foot()">Recommendation</button>
+        <div id="output"></div>
+    </body>
+</html>

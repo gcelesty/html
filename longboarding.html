@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Longboarding</title>
+
+        <script>
+            function longboarding() {
+                // user will chose the location
+                var locationOfLongboard = document.getElementById('location').value;
+
+                // display message of location
+                var message = "I will be longbarding at the " + locationOfLongboard + " today and I'm excited.";
+
+                // display message for user to see
+               document.getElementById('output').innerHTML = message;
+
+                }
+        </script>
+    </head>
+
+    <body>
+        Choose skate park, park, or neighborhood: <input type="text" id="location"><br>
+        <button type="button" onclick="longboarding()">Choose</button>
+        <div id="output"></div> 
+    </body>
+</html>

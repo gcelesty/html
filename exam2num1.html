@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input: take 2 numbers from user
+ * Processing: if statements
+ * Output: display true or false
+ */
+
+ function bool() {
+     //get 2 numbers
+     var a = parseInt(document.getElementById('one').value);
+     var b = parseInt(document.getElementById('two').value);
+
+     //if statements
+     var s = a + b;
+     if (s < 20) {
+         result = "False";
+     }
+     else if (a < 5 && b < 5) {
+         result = "False";
+     }
+     else {
+         result = "True";
+     }
+
+     //display
+     document.getElementById('output').innerHTML = result;
+ }
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="bool()">Click</button>
+<div id="output"></div>
+</body>
+</html>

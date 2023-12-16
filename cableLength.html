@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Cable Length</title>
+
+        <script>
+            /* Defining Table
+                Input: cable distance and dip
+                Processing: compute the length
+                Output: length of cable
+            */
+
+function length() {
+           
+            // user distance and sag
+            var d = parseFloat(document.getElementById('distance').value);
+            var s = parseFloat(document.getElementById('sag').value);
+            
+            // compute the length of the cable
+            var L = s + (8 * d * d) / (3 * s);
+
+            // display the length
+            document.getElementById('output').innerHTML = L.toFixed(2);
+            
+            }
+        </script>
+    </head>
+
+    <body>
+        Enter the distance: <input type="text" id="distance"><br>
+        Enter the the dip: <input type="text" id="sag"><br>
+        <button type="button" onclick="length()">Calculate</button>
+        <div id="output"></div> 
+    </body>
+</html>

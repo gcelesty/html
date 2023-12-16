@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+
+        <script>
+            /* Defining Table
+                Input: month name
+                Processing: if statements to determine the days in the month
+                Output: number days of the month
+            */
+
+        function days() {
+            //get month from the user
+            var m = document.getElementById('month').value;
+            m = m.toLowerCase();
+
+            //if else statements
+            var days;
+            if (m == "february") {
+                days = "28 or 29";
+            }
+            else if (m == "january" || m == "march" || m == "may" || m == "july" || m == "august" || m == "october" || m == "december") {
+                days = 31;
+            }
+            else if (m == "april" || m == "june" || m == "september" || m == "november") {
+                days = 30;
+            }
+            else {
+                days = "Please enter a valid month.";
+            }
+
+            //display the days
+            document.getElementById('output').innerHTML = days;
+        }
+        </script>
+    </head>
+
+
+    <body>
+        Enter a month (lower case): <input type="text" id="month"><br>
+        <button type="button" onclick="days()">Days in the Month</button>
+        <div id="output"></div> 
+    </body>
+</html>
